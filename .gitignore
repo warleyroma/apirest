@@ -1,9 +1,9 @@
-tests
-.vscode
-node-modules
 node_modules
 .env
-env
-venv
-testes
-.DS_Store
+*.jpg
+*.png
+*.gif
+junk.js
+pull-server.sh
+sync.sh
+db.sqlite
