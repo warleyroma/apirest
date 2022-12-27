@@ -3,8 +3,6 @@ import { resolve } from 'path';
 import './database';
 
 import express from 'express';
-import cors from 'cors';
-import helmet from 'helmet';
 
 import homeRoutes from './routes/homeRoutes';
 import userRoutes from './routes/userRoutes';
@@ -12,6 +10,7 @@ import tokenRoutes from './routes/tokenRoutes';
 import alunoRoutes from './routes/alunoRoutes';
 import fotoRoutes from './routes/fotoRoutes';
 
+<<<<<<< HEAD:src/app.js
 const whiteList = [
   'https://react1.otaviomiranda.com.br',
   'https://react2.otaviomiranda.com.br',
@@ -28,6 +27,8 @@ const corsOptions = {
   }
 };
 
+=======
+>>>>>>> parent of 20e328e (Modificações na api para consumo com react):api_rest/src/app.js
 class App {
   constructor() {
     this.app = express();
@@ -36,8 +37,6 @@ class App {
   }
 
   middlewares() {
-    this.app.use(cors(corsOptions));
-    this.app.use(helmet());
     this.app.use(express.urlencoded({ extended: true }));
     this.app.use(express.json());
     this.app.use('/images/', express.static(resolve(__dirname, '..', 'uploads', 'images')));
